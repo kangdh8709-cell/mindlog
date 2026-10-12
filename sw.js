@@ -1,5 +1,5 @@
 /* 방방곡곡 감정Log — 오프라인 캐시 */
-var VERSION = "v20";
+var VERSION = "v22";
 var BOX = "mindlog-" + VERSION;
 var FILES = ["./", "./index.html", "./manifest.webmanifest",
              "./icon-192.png", "./icon-512.png", "./icon-512-maskable.png", "./icon-180.png"];
