@@ -1,12 +1,30 @@
-# 이 앱에 들어간 글꼴
+# 방방곡곡 감정Log — 올리는 법
 
-세 글꼴 모두 **SIL Open Font License 1.1** 입니다.
-웹앱에 심어 배포하는 것이 허용됩니다 (글꼴 자체를 따로 파는 것만 금지).
+이 폴더를 통째로 깃허브 저장소에 올리고 Pages 를 켜면 끝입니다.
 
-| 글꼴 | 저작권 | 쓰인 곳 |
-|---|---|---|
-| Gowun Dodum | © 2021 The Gowun Dodum Project Authors | 제목·질문 |
-| IBM Plex Sans KR | © 2017 IBM Corp. (예약명 "Plex") | 본문 |
-| Gaegu | © 2018 The Gaegu Project Authors | 학생이 쓰는 한 줄 |
+1. github.com 에서 새 저장소를 만듭니다 (예: `mindlog`). **Public** 으로.
+2. 이 폴더 안의 파일을 전부 끌어다 올립니다 (Add file → Upload files).
+3. Settings → Pages → Source 를 **Deploy from a branch**, 브랜치 `main` / 폴더 `/ (root)` 로 두고 Save.
+4. 1~2분 뒤 `https://<아이디>.github.io/mindlog/` 로 열립니다.
 
-라이선스 전문은 `OFL-Gowun-Dodum.txt`, `OFL-IBM-Plex.txt`, `OFL-Gaegu.txt` 에 있습니다.
+## 태블릿에 담기 (심사장용)
+
+- **안드로이드**: 크롬으로 주소를 열고 → 메뉴 ⋮ → **홈 화면에 추가**
+- **아이패드**: 사파리로 열고 → 공유 버튼 → **홈 화면에 추가**
+
+한 번 열어 두면 그 다음부터는 **인터넷 없이** 홈 화면 아이콘으로 바로 열립니다.
+주소창도 없이 앱처럼 뜹니다.
+
+## 내용을 고친 뒤
+
+`sw.js` 안의 `var VERSION = "v33";` 숫자를 올리고 다시 올리면,
+기기가 새 내용을 받아 갑니다. 숫자를 안 올리면 옛 내용이 계속 보입니다.
+
+## 파일
+
+| 파일 | 하는 일 |
+|---|---|
+| `index.html` | 앱 전체 (그림·일력 데이터까지 한 파일에 들어 있음) |
+| `manifest.webmanifest` | 앱 이름·아이콘·색 |
+| `sw.js` | 오프라인 캐시 |
+| `icon-*.png` | 홈 화면 아이콘 |
